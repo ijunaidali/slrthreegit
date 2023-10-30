@@ -1,0 +1,13 @@
+.saveThisSearch {
+    background-color:black;
+    color:white;
+  }
+
+  .active{
+    background-color:green;
+    color:white;
+  }
+
+  body{
+    color:red;
+  }
