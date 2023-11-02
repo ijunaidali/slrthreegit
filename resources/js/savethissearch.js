@@ -1,14 +1,23 @@
 import "../css/custom.css";
-
+require("noty/src/noty.scss");
+require("noty/src/themes/mint.scss");
+window.Noty = require('noty');
 window.axios = require('axios');
 
 //const appDomain = "https://e702-101-50-109-25.ngrok-free.app";
 
+var searchTextBox = document.querySelector('#Search-In-Modal');
 
+function addSaveList(shopId) {
+    var searchText = searchTextBox.value.trim();
+    new Noty({
+        type: 'success',
+        layout: 'topRight',
+        text: 'shopId + search text: '+ shopId + ' ' +searchText,
+        timeout: 300
+    }).show();
 
-function addWishlist() {
-
-    console.log('add wishlist button three');
+    console.log('addSaveList clicked');
 
     // axios.get(appDomain+'/api/addToWishlist', {shop_id: Shopify.shop,customer_id: customer, product_id: product_id })
     //     .then(response => {
@@ -18,32 +27,43 @@ function addWishlist() {
     //         console.log("ERROR: ", error);
     //     });
 
-
-    // new Noty({
-    //     type: 'success',
-    //     layout: 'topRight',
-    //     timeout: 3000,
-    //     text: 'Added to wishlist'
-    // }).show();
-
     // ajax
 }
 
-function removeWishlist() {
+function removeSavelist() {
+    new Noty({
+        type: 'warning',
+        layout: 'topRight',
+        text: 'removed',
+        timeout: 300
+    }).show();
 
-    console.log('remove wishlist button three');
+    console.log('remove addSaveList clicked');
 }
 var wishListButton = document.querySelector('.saveThisSearch');
+
 
 wishListButton.addEventListener('click', function (){
     
 
     if (this.classList.contains("active")) {
-        removeWishlist();
+        removeSavelist();
         this.classList.remove("active");
     }else{
         this.classList.add("active");
-        addWishlist();
+        var shopId = this.dataset.store;
+        console.log('this.dataset shopId', this.dataset, shopId);
+        addSaveList(shopId);
     }
 
 });
+
+
+// searchIcon.addEventListener('click', function (){
+//     new Noty({
+//         type: 'success',
+//         layout: 'topRight',
+//         text: 'search icon clicked',
+//         timeout: 300
+//     }).show();
+// });
