@@ -95,23 +95,8 @@ return [
         'mongodb' => [
             'driver' => 'mongodb',
             'dsn' => env('DB_CONNECTION_STRING'),
-            'database' => env('DB_DATABASE', 'save_this_search_dev'),
+            'database' => env('DB_DATABASE', ''),
         ],
-        // 'mongodb' => [
-        //     'driver' => 'mongodb',
-        //     'host' => env('DB_HOST', 'cluster0.39h2gvi.mongodb.net'),
-        //     'port' => env('DB_PORT', 27017),
-        //     'database' => env('DB_DATABASE', 'save_this_search_dev'),
-        //     'username' => env('DB_USERNAME', 'save_this_search_dev'),
-        //     'password' => env('DB_PASSWORD', 'KAWba6ZwTQZkIYHz'),
-        //     //'options' => [
-        //     //    'database' => 'admin', // The authentication database
-        //     //],
-        //     //'dsn' => env('DB_BASE_URI','mongodb://').env('DB_HOST', 'localhost')
-        //     //'dsn' => env('DB_BASE_URI','mongodb://').env('DB_HOST', 'localhost')
-        //     //'dsn' => env('DB_BASE_URI','mongodb+srv://').env('DB_HOST', 'cluster0.39h2gvi.mongodb.net')
-        //     //local uri mongodb://localhost:27017
-        // ],
 
     ],
 
