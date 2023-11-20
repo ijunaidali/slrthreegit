@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/junaid', function() {
+    dd('hello');
+});
+
 Route::get('/', function () {
     return view('dashboard');
 })->middleware(['verify.shopify'])->name('home');
