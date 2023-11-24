@@ -50,7 +50,7 @@ wishListButton.addEventListener('click', function (){
         removeSavelist();
         this.classList.remove("active");
     }else{
-        this.classList.add("active");
+        this.classList.add("active");``
         var shopId = this.dataset.store;
         console.log('this.dataset shopId', this.dataset, shopId);
         addSaveList(shopId);

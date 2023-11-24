@@ -9076,7 +9076,7 @@ function addSaveList(shopId) {
     text: 'shopId + search text: ' + shopId + ' ' + searchText,
     timeout: 300
   }).show();
-  console.log('addSaveList clicked');
+  console.log('SaveThisSearch clicked');
 
   // axios.get(appDomain+'/api/addToWishlist', {shop_id: Shopify.shop,customer_id: customer, product_id: product_id })
   //     .then(response => {
@@ -9096,7 +9096,7 @@ function removeSavelist() {
     text: 'removed',
     timeout: 300
   }).show();
-  console.log('remove addSaveList clicked');
+  console.log('remove SaveThisSearch clicked');
 }
 var wishListButton = document.querySelector('.saveThisSearch');
 wishListButton.addEventListener('click', function () {

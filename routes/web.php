@@ -19,7 +19,7 @@ Route::get('/junaid', function() {
 
 Route::get('/', function () {
     return view('dashboard');
-})->middleware(['verify.shopify'])->name('home');
+})->middleware(['auth.shopify'])->name('home');
 
 Route::view('/products', 'products');
 Route::view('/customers', 'customers');
